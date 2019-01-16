@@ -7,6 +7,7 @@ import Weather from "./components/Weather";
 const API_KEY = "d49a0ac97d35d587a28ede11aaa55626"
 
 class App extends Component {
+
     state = {
         city: undefined,
         country: undefined,
@@ -18,8 +19,10 @@ class App extends Component {
 
     getWeather = async (e) => {
         e.preventDefault();
+
         const city = e.target.elements.city.value;
         const country = e.target.elements.country.value;
+
         const url = `https://samples.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`
         console.log(url)
         const todayWeatherApi = await fetch(url);
@@ -54,18 +57,30 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Title/>
-                <Form getWeather={this.getWeather}/>
-                <Weather
-                    city={this.state.city}
-                    country={this.state.country}
-                    temperature={this.state.temperature}
-                    humidity={this.state.humidity}
-                    description={this.state.description}
-                    error={this.state.error}
+                <div className="wrapper">
+                    <div className="main">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-xs-5 title-container">
+                                    <Title/>
+                                </div>
+                                <div className="col-xs-7 form-container">
+                                    <Form getWeather={this.getWeather}/>
+                                    <Weather
+                                        city={this.state.city}
+                                        country={this.state.country}
+                                        temperature={this.state.temperature}
+                                        humidity={this.state.humidity}
+                                        description={this.state.description}
+                                        error={this.state.error}
 
 
-                />
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
