@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './../App.css';
 
-const Weather=(props)=> (
+const Weather=props=> (
     <div>
         {props.city && props.country && <p>Location :  {props.city},{props.country} </p>}
         {props.temperature && <p>temperature:  {props.temperature} </p>}
