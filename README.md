@@ -1,5 +1,5 @@
 <h1 align="center">
-  	<img height="100" src="https://user-images.githubusercontent.com/25702074/57968321-0b12c680-7982-11e9-8784-097d7b2594b2.png" alt="React Weather Inspector" /> <br> React Weather Inspector
+  	<img height="100" src="https://user-images.githubusercontent.com/25702074/57981166-a1f88500-7a4d-11e9-9e0f-56629c04e03c.png" alt="React Weather Inspector" /> <br> React Weather Inspector
 </h1>
 
 <p align="center">
